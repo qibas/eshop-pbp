@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Shop PBP</title>
+</head>
+<body>
+    <h1>Welcome to E-Shop PBP</h1>
+
+    <div class="product-list">
+        {% for product in products %}
+            <div class="product">
+                <h2>{{ product.name }}</h2>
+                <p>{{ product.description }}</p>
+                <p>Price: Rp{{ product.price }}</p>
+                <img src="{{ product.image_url }}" alt="{{ product.name }}">
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
